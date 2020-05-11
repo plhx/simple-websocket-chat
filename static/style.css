@@ -1,0 +1,9 @@
+/* style.css */
+
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Meiryo UI', 'Meiryo', 'HiraKakuProN-W3', sans-serif;
+}
+
+[v-cloak] {
+    display: none !important;
+}
