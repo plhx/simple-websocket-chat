@@ -25,6 +25,7 @@ $(function() {
 
     let formView = new Vue({
         el: '.form-view',
+        delimiters: ['[[', ']]'],
         data: {
             name: '名無しさん',
             message: '',
@@ -51,6 +52,7 @@ $(function() {
 
     let messageView = new Vue({
         el: '.message-view',
+        delimiters: ['[[', ']]'],
         data: {
             maxlines: 20,
             message: []

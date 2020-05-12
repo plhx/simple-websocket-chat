@@ -39,7 +39,7 @@
             <hr />
             <div class="message-view">
                 <div v-for="m in message">
-                    <div><span v-bind:style="{color: m.color}">{{ m.name }}: {{ m.message }}</span> <span class="text-muted small">({{ fromTimestamp(m.timestamp) }})</span></div>
+                    <div><span v-bind:style="{color: m.color}">[[ m.name ]]: [[ m.message ]]</span> <span class="text-muted small">([[ fromTimestamp(m.timestamp) ]])</span></div>
                 </div>
             </div>
         </div>
