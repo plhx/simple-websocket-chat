@@ -9,11 +9,11 @@ app.use('/', express.static('templates'))
 app.use('/static', express.static('static'))
 
 app.ws('/provider', (ws, request) => {
-    const remoteAddress = request.connection.remoteAddress
+    const remoteAddress = request.headers['x-forwarded-for']
+        || request.connection.remoteAddress
     console.log(`client connected: ${remoteAddress}`)
     clients.push(ws)
     ws.on('message', (message) => {
-        //ws.send(message)
         clients.forEach((client) => {
             client.send(message)
         })
